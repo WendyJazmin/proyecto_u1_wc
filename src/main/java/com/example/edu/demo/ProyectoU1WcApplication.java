@@ -16,6 +16,7 @@ public class ProyectoU1WcApplication implements CommandLineRunner {
 	//@Autowired
 	//private CitaMedica cita;
 	
+	@Autowired
 	private CitaMedica cita2;
 
 	public static void main(String[] args) {
