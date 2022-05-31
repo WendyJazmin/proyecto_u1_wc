@@ -1,4 +1,4 @@
-package com.example.edu.demo;
+package com.uce.edu.demo;
 
 import java.time.LocalDateTime;
 
@@ -7,7 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.demo.consultorio.CitaMedica;
+import com.uce.edu.demo.consultorio.CitaMedica;
 
 @SpringBootApplication
 public class ProyectoU1WcApplication implements CommandLineRunner {

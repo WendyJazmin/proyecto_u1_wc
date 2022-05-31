@@ -1,4 +1,4 @@
-package com.example.demo.consultorio;
+package com.uce.edu.demo.consultorio;
 
 import java.time.LocalDateTime;
 import org.springframework.stereotype.Service;
