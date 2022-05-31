@@ -1,5 +1,9 @@
 package com.example.demo.consultorio;
 
+import org.springframework.stereotype.Component;
+
+//le voy a poner un componente
+@Component
 public class Paciente {
 
 	private String nombre;
