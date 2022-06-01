@@ -13,8 +13,8 @@ import com.uce.edu.demo.consultorio.CitaMedica;
 public class ProyectoU1WcApplication implements CommandLineRunner {
 	
 	//1) DI por atributo
-	//@Autowired
-	//private CitaMedica cita;
+	@Autowired
+	private CitaMedica cita;
 	
 	@Autowired
 	private CitaMedica cita2;
