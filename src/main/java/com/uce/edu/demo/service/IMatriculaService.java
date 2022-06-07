@@ -9,10 +9,10 @@ public interface IMatriculaService {
 	//metodos de logica de negocio
 	public void ingresarMatricula(Matricula e);
 	
-	public Matricula buscarPorMatricula(String apellido);
+	public Matricula buscarPorMatricula(String numero);
 	
 	public void actualizarMatricula(Matricula e);
 	
-	public void borrarMatricula(String cedula);
+	public void borrarMatricula(String numero);
 
 }

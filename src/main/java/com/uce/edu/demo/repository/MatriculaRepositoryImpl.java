@@ -14,13 +14,13 @@ public class MatriculaRepositoryImpl implements IMatriculaRepository{
 		// TODO Auto-generated method stub
 		
 		//Aqui se realiza la insercion en la base de datos
-		System.out.println("Se ha insertado en la base el estudiante "+e);
+		System.out.println("Se ha insertado en la base la matricula: "+e);
 	}
 
 	@Override
 	public Matricula buscar(String numero) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha buscado en la base la materia "+numero);
+		System.out.println("Se ha buscado en la base la matricula: "+numero);
 		Matricula e = new Matricula();
 		e.setNumero(numero);
 		return e;
@@ -30,14 +30,14 @@ public class MatriculaRepositoryImpl implements IMatriculaRepository{
 	@Override
 	public void actualizar(Matricula e) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha actualizado en la base la amtricula "+e);
+		System.out.println("Se ha actualizado en la base la matricula: "+e);
 
 	}
 
 	@Override
 	public void eliminar(String cedula) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha eliminado en la base el estudiante "+cedula);
+		System.out.println("Se ha eliminado en la base el matricula: "+cedula);
 
 	}
 

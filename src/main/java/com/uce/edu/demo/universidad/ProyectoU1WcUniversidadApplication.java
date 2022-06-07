@@ -36,7 +36,7 @@ public class ProyectoU1WcUniversidadApplication implements CommandLineRunner{
 		//MATRICULA
 		//System.out.println();
 		
-		String respuesta4 = matricula1.matricular(LocalDateTime.now(), "Marco", 14245657, 20, "Economia", 50);
+	/*	String respuesta4 = matricula1.matricular(LocalDateTime.now(), "Marco", 14245657, 20, "Economia", 50);
 		System.out.println(respuesta4);
 		
 		String respuesta5 = matricula2.matricular(LocalDateTime.now(), "Andrea", 14088757, 19, "Fisica", 12);
@@ -44,6 +44,7 @@ public class ProyectoU1WcUniversidadApplication implements CommandLineRunner{
 		
 		String respuesta6 = matricula3.matricular(LocalDateTime.now(), "Daniel", 13238857, 22, "Ecuaciones Diferenciales", 44);
 		System.out.println(respuesta6);
+		*/
 	}
 
 }

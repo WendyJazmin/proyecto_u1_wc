@@ -12,6 +12,6 @@ public interface IMateriaService {
 	
 	public void actualizarMateria(Materia e);
 	
-	public void borrarMateria(String cedula);
+	public void borrarMateria(String nombre);
 
 }

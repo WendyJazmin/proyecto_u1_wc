@@ -10,7 +10,7 @@ public class Estudiante {
 	
 	@Override
 	public String toString() {
-		return "Estudiante [cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + "]";
+		return "Estudiante [cedula = " + cedula + ", nombre = " + nombre + ", apellido = " + apellido + "]";
 	}
 	//set y get
 	public String getNombre() {

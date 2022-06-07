@@ -18,13 +18,13 @@ public class MateriaServiceImpl implements IMateriaService {
 	public void ingresarMateria(Materia e) {
 		// TODO Auto-generated method stub
 		System.out.println();
-		//this.estuRepository.i
+		this.estuRepository.insertar(e);
 	}
 
 	@Override
-	public Materia buscarPorMateria(String apellido) {
+	public Materia buscarPorMateria(String nombre) {
 		// TODO Auto-generated method stub
-		return this.estuRepository.buscar(apellido);
+		return this.estuRepository.buscar(nombre);
 	}
 
 	@Override
@@ -34,10 +34,10 @@ public class MateriaServiceImpl implements IMateriaService {
 	}
 
 	@Override
-	public void borrarMateria(String cedula) {
+	public void borrarMateria(String nombre) {
 		// TODO Auto-generated method stub
 	
-		this.estuRepository.eliminar(cedula);
+		this.estuRepository.eliminar(nombre);
 	}
 
 }

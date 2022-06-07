@@ -18,13 +18,13 @@ public class MatriculaServiceImpl implements IMatriculaService {
 	public void ingresarMatricula(Matricula e) {
 		// TODO Auto-generated method stub
 		System.out.println();
-		//this.estuRepository.i
+		this.estuRepository.insertar(e);
 	}
 
 	@Override
-	public Matricula buscarPorMatricula(String apellido) {
+	public Matricula buscarPorMatricula(String numero) {
 		// TODO Auto-generated method stub
-		return this.estuRepository.buscar(apellido);
+		return this.estuRepository.buscar(numero);
 	}
 
 	@Override
@@ -34,10 +34,10 @@ public class MatriculaServiceImpl implements IMatriculaService {
 	}
 
 	@Override
-	public void borrarMatricula(String cedula) {
+	public void borrarMatricula(String numero) {
 		// TODO Auto-generated method stub
 	
-		this.estuRepository.eliminar(cedula);
+		this.estuRepository.eliminar(numero);
 	}
 
 }

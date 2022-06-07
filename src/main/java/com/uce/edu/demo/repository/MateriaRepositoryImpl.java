@@ -13,13 +13,13 @@ public class MateriaRepositoryImpl implements IMateriaRepository{
 		// TODO Auto-generated method stub
 		
 		//Aqui se realiza la insercion en la base de datos
-		System.out.println("Se ha insertado en la base el estudiante "+e);
+		System.out.println("Se ha insertado en la base la materia: "+e);
 	}
 
 	@Override
 	public Materia buscar(String nombre) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha buscado en la base la materia "+nombre);
+		System.out.println("Se ha buscado en la base la materia: "+nombre);
 		Materia e = new Materia();
 		e.setNombre(nombre);
 	
@@ -30,14 +30,14 @@ public class MateriaRepositoryImpl implements IMateriaRepository{
 	@Override
 	public void actualizar(Materia e) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha actualizado en la base el estudiante "+e);
+		System.out.println("Se ha actualizado en la base la materia: "+e);
 
 	}
 
 	@Override
-	public void eliminar(String cedula) {
+	public void eliminar(String nombre) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha eliminado en la base el estudiante "+cedula);
+		System.out.println("Se ha eliminado en la base la materia: "+nombre);
 
 	}
 

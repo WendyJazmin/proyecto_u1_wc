@@ -15,8 +15,7 @@ public class EstudianteServiceImpl implements IEstudianteService {
 	@Override
 	public void ingresarEstudiante(Estudiante e) {
 		// TODO Auto-generated method stub
-		System.out.println();
-		//this.estuRepository.i
+		this.estuRepository.insertar(e);
 	}
 
 	@Override
