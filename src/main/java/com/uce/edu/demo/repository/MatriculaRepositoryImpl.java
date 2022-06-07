@@ -41,22 +41,4 @@ public class MatriculaRepositoryImpl implements IMatriculaRepository{
 
 	}
 
-	@Override
-	public void insertar(com.uce.edu.demo.universidad.Matricula e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public com.uce.edu.demo.universidad.Matricula buscar(String numero) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void actualizar(com.uce.edu.demo.universidad.Matricula e) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

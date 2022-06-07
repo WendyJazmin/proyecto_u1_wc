@@ -2,7 +2,7 @@ package com.uce.edu.demo.repository;
 
 import com.uce.edu.demo.modelo.Estudiante;
 import com.uce.edu.demo.modelo.Materia;
-import com.uce.edu.demo.universidad.Matricula;
+import com.uce.edu.demo.modelo.Matricula;
 
 public interface IMatriculaRepository {
 
@@ -19,4 +19,6 @@ public interface IMatriculaRepository {
 	
 	//D: eliminar
 	public void eliminar(String nombre);
+
+	
 }
