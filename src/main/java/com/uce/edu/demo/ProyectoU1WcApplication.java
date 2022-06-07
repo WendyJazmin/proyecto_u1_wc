@@ -59,6 +59,7 @@ public class ProyectoU1WcApplication implements CommandLineRunner {
 		
 		this.estudianteService.borrarEstudiante("1294848499");
 		
+		System.out.println();
 		
 		Estudiante e3 = new Estudiante();
 		e3.setNombre("Jeff");
@@ -68,19 +69,25 @@ public class ProyectoU1WcApplication implements CommandLineRunner {
 		this.estudianteService.ingresarEstudiante(e3);
 		this.estudianteService.buscarPorApellido("Satur");
 		this.estudianteService.actualizarEstudiante(e3);
-		this.estudianteService.borrarEstudiante("033042199");
+		//this.estudianteService.borrarEstudiante("033042199");
 		
 		
-		//Materia
+		//Materias
+		
+		//materia 1
 		Materia materia = new Materia();
-		materia.setNombre("Economia");
+		materia.setNombre("Estadistica");
 		materia.setSemestre("4");
 		
 		this.materiaService.ingresarMateria(materia);
-		this.materiaService.buscarPorMateria("Economia");
-		this.materiaService.actualizarMateria(materia);
-		this.materiaService.borrarMateria("Economia");
 		
+		this.materiaService.buscarPorMateria("Estadistica");
+		
+		materia.setNombre("Probabilidad y estadistica");
+		this.materiaService.actualizarMateria(materia);
+		
+		
+		//materia 2
 		Materia materia2 = new Materia();
 		materia2.setNombre("Calculo");
 		materia2.setSemestre("2");
@@ -88,8 +95,9 @@ public class ProyectoU1WcApplication implements CommandLineRunner {
 		this.materiaService.ingresarMateria(materia2);
 		this.materiaService.buscarPorMateria("Calculo");
 		this.materiaService.actualizarMateria(materia2);
-		this.materiaService.borrarMateria("Calculo");
 		
+		
+		//materia 3
 		Materia materia3 = new Materia();
 		materia3.setNombre("Ecuaciones Diferenciales");
 		materia3.setSemestre("3");
@@ -97,12 +105,19 @@ public class ProyectoU1WcApplication implements CommandLineRunner {
 		this.materiaService.ingresarMateria(materia3);
 		this.materiaService.buscarPorMateria("Ecuaciones Diferenciales");
 		this.materiaService.actualizarMateria(materia3);
-		this.materiaService.borrarMateria("Ecuaciones Diferenciales");
 		
 		
+		//materia 4
+		Materia materia4 = new Materia();
+		materia4.setNombre("Base de datos");
+		materia4.setSemestre("4");
+		
+		this.materiaService.ingresarMateria(materia4);
+		this.materiaService.borrarMateria("Base de datos");
 		
 		
-		//Matricula
+		//Matriculas
+		
 		List<Materia> materias = new ArrayList<>();
 		materias.add(materia);
 		materias.add(materia2);
@@ -112,9 +127,10 @@ public class ProyectoU1WcApplication implements CommandLineRunner {
 		materias2.add(materia3);
 		
 		
+		//matricula 1
 		Matricula matricula1 = new Matricula();
 		matricula1.setNumero("000011");
-		matricula1.setEstudiante(e);
+		matricula1.setEstudiante(e1);
 		matricula1.setMateria(materias);
 		
 		this.matriculaService.ingresarMatricula(matricula1);
@@ -123,14 +139,19 @@ public class ProyectoU1WcApplication implements CommandLineRunner {
 		this.matriculaService.borrarMatricula("000011");
 		
 		
+		//matricula 2
 		Matricula matricula2 = new Matricula();
 		matricula2.setNumero("00024");
 		matricula2.setEstudiante(e3);
 		matricula2.setMateria(materias2);
 		
 		this.matriculaService.ingresarMatricula(matricula2);
+		
 		this.matriculaService.buscarPorMatricula("00024");
+		
+		matricula2.setNumero("000020");
 		this.matriculaService.actualizarMatricula(matricula2);
-		this.matriculaService.borrarMatricula("00024");
+		
+		
 	}
 }

@@ -12,7 +12,7 @@ public class EstudianteRepositoryImpl implements IEstudianteRepository{
 		// TODO Auto-generated method stub
 		
 		//Aqui se realiza la insercion en la base de datos
-		System.out.println("Se ha insertado en la base el estudiante "+e);
+		System.out.println("Se ha insertado en la base el estudiante: "+e);
 	}
 
 	@Override
