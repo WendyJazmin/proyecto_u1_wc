@@ -13,7 +13,8 @@ import com.uce.edu.demo.banco.repository.ITransferenciaRepository;
 @Service
 public class TransferenciaServiceImpl implements ITransferenciaService{
 
-	//como la logica de negocio
+	//como la logica de CuentaBancariaSevice no hace nada
+	//si puedo inyectar el CuentaBancariaService
 	@Autowired
 	private ICuentaBancariaService bancariaService;
 	
@@ -43,6 +44,30 @@ public class TransferenciaServiceImpl implements ITransferenciaService{
 		
 		this.itransferenciaRepository.insertar(t);
 	
+	}
+
+	@Override
+	public void insertarTransferencia(Transferencia t) {
+		// TODO Auto-generated method stub
+		this.itransferenciaRepository.insertar(t);
+	}
+
+	@Override
+	public Transferencia buscarTransferencia(String numeroCuenta) {
+		// TODO Auto-generated method stub
+		return this.itransferenciaRepository.buscarTransferencia(numeroCuenta);
+	}
+
+	@Override
+	public void actualizarTransferencia(Transferencia t) {
+		// TODO Auto-generated method stub
+		this.itransferenciaRepository.actualizarTransferencia(t);
+	}
+
+	@Override
+	public void eliminarTransferencia(String numeroCuenta) {
+		// TODO Auto-generated method stub
+		this.itransferenciaRepository.eliminarTransferencia(numeroCuenta);
 	}
 
 }
