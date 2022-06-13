@@ -7,8 +7,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class CitaMedica {
 	
+	//@Autowired
 	private LocalDateTime fechaCita;
 	
+	//@Autowired
 	private Doctor doctor;
 	
 	private Paciente paciente;
