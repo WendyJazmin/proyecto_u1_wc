@@ -26,6 +26,7 @@ public class DepositoRepositoryImpl implements IDepositoRepository{
 		
 		Deposito deposito = new Deposito();
 		deposito.setNumeroCuentaDestino(numeroCuenta);
+		System.out.println("buscar deposito repository: "+deposito);
 		return deposito;
 	}
 

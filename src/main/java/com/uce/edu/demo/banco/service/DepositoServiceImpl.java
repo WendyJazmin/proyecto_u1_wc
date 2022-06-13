@@ -34,6 +34,7 @@ public class DepositoServiceImpl implements IDepositoService {
 		deposito.setMonto(monto);
 		deposito.setNumeroCuentaDestino(numeroCtaDestino);
 	
+		System.out.println("realizo el deposito en deposito service");
 		this.depositoRepository.insertarDeposito(deposito);
 	}
 

@@ -21,6 +21,7 @@ public class EstudianteRepositoryImpl implements IEstudianteRepository{
 		System.out.println("Se ha buscado en la base el estudiante: "+apellido);
 		Estudiante e = new Estudiante();
 		e.setApellido(apellido);
+		System.out.println("/"+e);
 		return e;
 		
 	}

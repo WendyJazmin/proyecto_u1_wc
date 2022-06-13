@@ -25,6 +25,7 @@ public class RetiroRepositoryImpl implements IRetiroRepository{
 		
 		Retiro retiro = new Retiro();
 		retiro.setNumeroCuentaRetiro(numeroCuenta);
+		System.out.println("buscar retiro de repository"+retiro);
 		return retiro;
 	}
 
