@@ -10,7 +10,6 @@ public class Inventario {
 	private int cantidadProductos;
 	
 	
-	
 	@Override
 	public String toString() {
 		return producto +", cantidadProductos = "

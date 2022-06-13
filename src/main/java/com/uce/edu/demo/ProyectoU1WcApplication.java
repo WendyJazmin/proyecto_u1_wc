@@ -22,7 +22,6 @@ import com.uce.edu.demo.bodega.service.IInventarioService;
 @SpringBootApplication
 public class ProyectoU1WcApplication implements CommandLineRunner {
 	
-
 	
 	@Autowired
 	private IProductoService iProductoService;
@@ -47,7 +46,6 @@ public class ProyectoU1WcApplication implements CommandLineRunner {
 		this.iProductoService.insertarProducto("Fideo",new BigDecimal(2));
 		
 		
-
 		System.out.println("\n");
 		this.IInventarioService.insertarInventario("Aceite",new BigDecimal(1.40), 2, LocalDateTime.of(2021, 2, 16, 13, 35));
 		this.IInventarioService.insertarInventario("Atun", new BigDecimal(1.20), 4, LocalDateTime.of(2022, 8, 16, 16, 28));

@@ -13,7 +13,7 @@ public class GestorInventario {
 		
 		BigDecimal pv = pc.add(g);
 		BigDecimal pv2 = pv.add(ivas);
-
+		
 		return pv2;
 	}
 

@@ -7,7 +7,7 @@ import com.uce.edu.demo.bodega.modelo.Producto;
 public interface IProductoService {
 	
 	public void insertarProducto(String producto, BigDecimal precio);
-	
+
 	public Producto buscar(String producto);
 	
 	public void actualizar(Producto p);

@@ -9,7 +9,6 @@ import com.uce.edu.demo.bodega.modelo.Inventario;
 @Repository
 public class InventarioRepositoryImpl implements IInventarioRepository{
 
-	
 	@Override
 	public void insertar(Inventario inventario) {
 		// TODO Auto-generated method stub

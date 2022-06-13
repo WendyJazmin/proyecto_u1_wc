@@ -7,8 +7,6 @@ public class Producto {
 	private String nombre;
 	private BigDecimal precio;
 	
-	
-	
 	@Override
 	public String toString() {
 		return "nombre = " + nombre + ", precio = " + precio;

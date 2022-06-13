@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import com.uce.edu.demo.bodega.modelo.Producto;
 
-
 @Repository
 public class ProductoRepositoryImpl implements IProductoRepository{
 	
