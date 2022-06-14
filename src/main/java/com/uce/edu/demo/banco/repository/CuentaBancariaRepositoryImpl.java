@@ -24,7 +24,7 @@ public class CuentaBancariaRepositoryImpl implements ICuentaBancariaRepository {
 		System.out.println("Se busca la cuenta bancaria: "+numero);
 		CuentaBancaria cta = new CuentaBancaria();
 		cta.setNumero(numero);
-		cta.setTipo("C");
+		cta.setTipo("F");
 		cta.setSaldo(new BigDecimal(100));
 		
 		return cta;

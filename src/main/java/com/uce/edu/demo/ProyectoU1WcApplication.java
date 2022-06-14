@@ -23,7 +23,6 @@ import com.uce.edu.demo.bodega.service.IInventarioService;
 @SpringBootApplication
 public class ProyectoU1WcApplication implements CommandLineRunner {
 	
-	
 	@Autowired
 	private IFachadaCuentaBancaria bancaria;
 	
@@ -34,8 +33,11 @@ public class ProyectoU1WcApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-
+		
+	System.out.println();	
+		
 	BigDecimal interes = this.bancaria.calcularInteres("1213");
-	System.out.println(interes);
+	
+	System.out.println("interes: "+interes);
 	}
 }
