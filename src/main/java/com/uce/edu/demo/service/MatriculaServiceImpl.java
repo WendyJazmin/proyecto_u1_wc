@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 
 import com.uce.edu.demo.modelo.Estudiante;
 import com.uce.edu.demo.modelo.Matricula;
+import com.uce.edu.demo.modelo.ProfesorGeneral;
+import com.uce.edu.demo.modelo.ProfesorMateria;
 import com.uce.edu.demo.repository.IEstudianteRepository;
 import com.uce.edu.demo.repository.IMatriculaRepository;
 
@@ -12,32 +14,40 @@ import com.uce.edu.demo.repository.IMatriculaRepository;
 public class MatriculaServiceImpl implements IMatriculaService {
 
 	@Autowired
-	private IMatriculaRepository estuRepository;
+	private IMatriculaRepository iMatriculaRepository;
+	
+	@Autowired
+	private ProfesorGeneral profesorGeneral;
+	
+	@Autowired
+	private ProfesorMateria profesorMateria;
 	
 	@Override
 	public void ingresarMatricula(Matricula e) {
 		// TODO Auto-generated method stub
-		System.out.println();
-		this.estuRepository.insertar(e);
+		System.out.println("DI desde Service SINGLETON "+this.profesorGeneral);
+		System.out.println("DI desde Service PROTOTYPE "+this.profesorMateria);
+		
+		this.iMatriculaRepository.insertar(e);
 	}
 
 	@Override
 	public Matricula buscarPorMatricula(String numero) {
 		// TODO Auto-generated method stub
-		return this.estuRepository.buscar(numero);
+		return this.iMatriculaRepository.buscar(numero);
 	}
 
 	@Override
 	public void actualizarMatricula(Matricula e) {
 		// TODO Auto-generated method stub
-		  this.estuRepository.actualizar(e);
+		  this.iMatriculaRepository.actualizar(e);
 	}
 
 	@Override
 	public void borrarMatricula(String numero) {
 		// TODO Auto-generated method stub
 	
-		this.estuRepository.eliminar(numero);
+		this.iMatriculaRepository.eliminar(numero);
 	}
 
 }
