@@ -21,6 +21,11 @@ import com.uce.edu.demo.disco.modelo.Cantante;
 import com.uce.edu.demo.disco.service.IAlbumService;
 import com.uce.edu.demo.disco.service.ICancionService;
 import com.uce.edu.demo.disco.service.ICantanteService;
+import com.uce.edu.demo.matriculacion.modelo.Propietario;
+import com.uce.edu.demo.matriculacion.modelo.Vehiculo;
+import com.uce.edu.demo.matriculacion.service.IMatriculaGestorService;
+import com.uce.edu.demo.matriculacion.service.IPropietarioService;
+import com.uce.edu.demo.matriculacion.service.IVehiculoService;
 import com.uce.edu.demo.modelo.Estudiante;
 import com.uce.edu.demo.modelo.Materia;
 import com.uce.edu.demo.modelo.Matricula;
@@ -39,22 +44,13 @@ import com.uce.edu.demo.bodega.service.IInventarioService;
 public class ProyectoU1WcApplication implements CommandLineRunner {
 	
 	@Autowired
-	private ProfesorGeneral general;
+	private IVehiculoService iVehiculoService;
 	
 	@Autowired
-	private ProfesorGeneral general1;
-	
-	
-	@Autowired
-	private ProfesorMateria  materia;
-	
+	private IPropietarioService iPropietarioService;
 	
 	@Autowired
-	private ProfesorMateria  materia1;
-	
-	@Autowired
-	private IMatriculaService iIMatriculaService;
-	
+	private IMatriculaGestorService gestorService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU1WcApplication.class, args);
@@ -63,33 +59,29 @@ public class ProyectoU1WcApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-	System.out.println();
-	System.out.println("ejemplo Singleton");
-		this.general.setNombre("Jeff");
-		this.general.setApellido("Satur");
-	
-		System.out.println(this.general);
+		//1
+		Vehiculo vehiculo = new Vehiculo();
+		vehiculo.setMarca("Toyota");
+		vehiculo.setPlaca("PCT348");
+		vehiculo.setPrecio(new BigDecimal(50000));
+		vehiculo.setTipo("pesado");
+		this.iVehiculoService.insertarVehiculo(vehiculo);
 		
-		System.out.println("------------------------------------------");
-		System.out.println(this.general1);
-		this.general1.setNombre("Daniel");
-		System.out.println("------------------------------------------");
-		System.out.println(this.general);
+		//2
+		vehiculo.setMarca("Chevrolet");
+		vehiculo.setPrecio(new BigDecimal(40000));
+		this.iVehiculoService.actualizarVehiculo(vehiculo);
 		
-		System.out.println("\nejemplo Prototype");
+		//3
+		Propietario pro = new Propietario();
+		pro.setApellido("Cayambe");
+		pro.setNombre("Edison");
+		pro.setCedula("128333489");
+		pro.setFechaNacimiento(LocalDateTime.now());
+		this.iPropietarioService.crearPropietario(pro);
 		
-		this.materia.setNombre("Alex");
-		this.materia.setApellido("Alvear");
-		System.out.println(this.materia);
-		System.out.println(this.materia1);
-		
-		
-		Matricula matricula1 = new Matricula();
-		matricula1.setEstudiante(new Estudiante());
-		matricula1.setMateria(new ArrayList<>());
-		matricula1.setNumero("12123");
-		
-		System.out.println();
-		this.iIMatriculaService.ingresarMatricula(matricula1);
+		//4
+		this.gestorService.generarMatricula(pro.getCedula(), vehiculo.getPlaca());
+
 	}
 }
